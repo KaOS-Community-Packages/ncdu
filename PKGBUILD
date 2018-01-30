@@ -1,5 +1,5 @@
 pkgname=ncdu
-pkgver=1.12
+pkgver=1.13
 pkgrel=1
 pkgdesc='NCurses Disk usage analyzer'
 url='http://dev.yorhel.nl/ncdu/'
@@ -7,7 +7,7 @@ license=('custom:MIT')
 depends=('ncurses')
 arch=('x86_64')
 source=("http://dev.yorhel.nl/download/${pkgname}-${pkgver}.tar.gz")
-sha1sums=('b79b1c44784f334dca74d89a49f49274f14cfeef')
+sha1sums=('3233c4185208d9989ac528a94817ed92dd59c773')
 
 build() {
 	cd "${srcdir}/${pkgname}-${pkgver}"

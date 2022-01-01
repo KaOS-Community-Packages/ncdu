@@ -1,23 +1,14 @@
 pkgname=ncdu
-pkgver=1.16
+pkgver=2.0
 pkgrel=1
 pkgdesc='NCurses Disk usage analyzer'
 url='http://dev.yorhel.nl/ncdu/'
 license=('custom:MIT')
 depends=('ncurses')
-makedepends=('clang')
 arch=('x86_64')
-source=("http://dev.yorhel.nl/download/${pkgname}-${pkgver}.tar.gz")
-sha1sums=('0ebff95373a9b7e7976b22bc763043e40d12c62b')
-
-build() {
-	cd "${srcdir}/${pkgname}-${pkgver}"
-	./configure --prefix=/usr
-	make CC=clang
-}
+source=("https://dev.yorhel.nl/download/${pkgname}-${pkgver}-linux-x86_64.tar.gz")
+sha256sums=('f5e16062a330f5c7fbe27b2bf0d507caeb61195d5b956d13c6eea63fb08685b5')
 
 package() {
-	cd "${srcdir}/${pkgname}-${pkgver}"
-	make DESTDIR="${pkgdir}" install
-	install -Dm644 COPYING "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
+	install -Dm755 "${srcdir}/${pkgname}" "${pkgdir}/usr/bin/${pkgname}"
 }

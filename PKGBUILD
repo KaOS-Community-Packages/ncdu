@@ -1,5 +1,5 @@
 pkgname=ncdu
-pkgver=2.2
+pkgver=2.2.1
 pkgrel=1
 pkgdesc='NCurses Disk usage analyzer'
 url='http://dev.yorhel.nl/ncdu/'
@@ -7,7 +7,7 @@ license=('custom:MIT')
 depends=('ncurses')
 arch=('x86_64')
 source=("https://dev.yorhel.nl/download/${pkgname}-${pkgver}-linux-x86_64.tar.gz")
-sha256sums=('e66ea051cc1b1f8173fb4aca3f955e11f00813a9139546ca5dbf60f6f3c3eb6e')
+sha256sums=('0915f329c86d4722b8a89f0165a437c546ca32f4f7f4e700a567ee786d52cded')
 
 package() {
 	install -Dm755 "${srcdir}/${pkgname}" "${pkgdir}/usr/bin/${pkgname}"
